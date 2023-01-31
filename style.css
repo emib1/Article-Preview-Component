@@ -1,0 +1,119 @@
+:root{
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+    --Fontsize: 13px;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--LightGrayishBlue);
+    color: var(--GrayishBlue);
+}
+
+
+h2, h4 {
+    color: var(--VeryDarkGrayishBlue);
+    margin-bottom: 0.5rem;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:auto auto ;  
+    max-width: 720px;
+    height: 375px;
+    margin: 5%;
+    border-radius: 20px;
+}
+
+.img  {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow: hidden;
+}
+
+.text {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0px 20px 20px 0px;
+
+}
+.text p{
+    margin-bottom: 0.5rem;
+}
+
+
+.person {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-around;
+}
+
+.person-text{
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.5rem;
+}
+
+.person img{
+    width: 10%;
+    border-radius: 50%;
+}
+
+
+.share {
+    width: 10%;
+    background-color: var(--LightGrayishBlue);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer; 
+}
+
+
+.share-active{
+    background-color: var(--VeryDarkGrayishBlue);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;   
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+/********************Media ************************/
+
+@media screen and (max-width:650px) {
+    .container{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto;
+        margin:5%;
+    }
+
+   .img {
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    
+   } 
+
+   .text {
+    border-radius: 0 0 15px 15px;
+   }
+}
